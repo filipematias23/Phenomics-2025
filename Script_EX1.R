@@ -156,6 +156,8 @@ names(EPH)<-"EPH"
 Test.Info <- fieldInfo_extra(mosaic = EPH, 
                  fieldShape = Test.Info, 
                  fun = mean) 
+colnames(Test.Info)
+colnames(Test.Info)[17]<-"EPH"
 
 ########################################
 ### Evaluating all mosaics in a loop ###
@@ -188,6 +190,8 @@ for(i in 2:length(MOSAIC)){
   print(paste("### Completed: ", "Mosaic_",i," ###",sep=""))
   }
 
+colnames(DataTotal)
+colnames(DataTotal)[13]<-"EPH"
 DataTotal<-DataTotal[,!colnames(DataTotal)%in%c("ID","ID.1","PlotID","geometry")] # Removing column 12 ("ID.1")
 #write.csv(DataTotal,"DataTotal.csv",row.names = F,col.names = T)
 
