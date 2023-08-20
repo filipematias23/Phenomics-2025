@@ -6,7 +6,7 @@
 ### Packages ### 
 ################
 
-# devtools::install_github("OpenDroneMap/FIELDimageR", dependencies=FALSE)
+devtools::install_github("OpenDroneMap/FIELDimageR", dependencies=FALSE)
 # devtools::install_github("filipematias23/FIELDimageR.Extra", dependencies=FALSE)
 
 library(FIELDimageR)
