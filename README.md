@@ -12,7 +12,12 @@
 
 ## Hands-On:
 
-> Open Example Tutorial: [https://github.com/filipematias23/FIELDimageR.Extra](https://github.com/filipematias23/FIELDimageR.Extra)
+> * **Example 01** [(Potato Growth Cycle - UAV/RGB)](https://filipematias23.github.io/FIELDimageR-Workshop-11/#example-01)
+> 
+> * **Example 02** [(Potato Flowering Stage - Hyperspectral)](https://filipematias23.github.io/FIELDimageR-Workshop-11/#example-02)
+> 
+> * **Example 03** [(Counting Green Seeds - Soybean)](https://filipematias23.github.io/FIELDimageR-Workshop-11/#example-03)
+> 
 
 > Launch the Binder button below to open a virtual RStudio (running this tutorial online):
 
