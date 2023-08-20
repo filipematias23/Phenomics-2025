@@ -78,7 +78,7 @@ EX.HYP.I<- fieldInfo_extra(EX.HYP,
 ## Saving the new csv with hyperspectral information per plot:
 DataHYP<- as.data.frame(EX.HYP.I)[,!colnames(EX.HYP.I)%in%c("ID.1","geometry")] # Removing column ("ID.1")
 
-colnames(DataHYP)<- c(colnames(DataHYP)[1:9], NamesHYP)
+colnames(DataHYP)<- c(colnames(DataHYP)[1:8], NamesHYP)
 DataHYP[1:5, 1:12]
 # write.csv(DataHYP,"DataHypNew.csv",col.names = T,row.names = F)
 
