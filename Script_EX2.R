@@ -22,6 +22,7 @@ library(ggrepel)
 library(terra)
 library(mapview)
 library(leafsync)
+library(sf)
 
 ## Uploading hyperspectral file with 474 bands (EX_HYP.tif):
 EX.HYP<- rast("EX_HYP.tif")
