@@ -12,11 +12,11 @@
 
 ## Hands-On:
 
-> Open Example Tutorial: [https://filipematias23.github.io/FIELDimageR-Workshop-11/](https://filipematias23.github.io/FIELDimageR-Workshop-11/)
+> Open Example Tutorial: [https://github.com/filipematias23/FIELDimageR.Extra](https://github.com/filipematias23/FIELDimageR.Extra)
 
 > Launch the Binder button below to open a virtual RStudio (running this tutorial online):
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/filipematias23/FIELDimageR.Extra-Workshop.git/master?urlpath=rstudio)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/filipematias23/FIELDimageR.Extra-Workshop-01.git/main?urlpath=rstudio)
 
 <br />
 
