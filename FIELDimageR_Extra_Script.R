@@ -6,6 +6,8 @@
 ### Packages ### 
 ################
 
+devtools::install_github("OpenDroneMap/FIELDimageR")
+
 library(FIELDimageR)
 library(FIELDimageR.Extra)
 library(terra)
