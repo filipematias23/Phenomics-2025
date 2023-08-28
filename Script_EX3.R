@@ -16,6 +16,10 @@ library(agricolae)
 library(reshape2)
 library(lme4)
 library(readxl)
+library(terra)
+library(mapview)
+library(sf)
+library(stars)
 
 # Uploading one image as example and decreasing the resolution
 EX3<-stack("soybean/11.jpg")
