@@ -9,6 +9,7 @@
 library(spatialEco)
 devtools::install_github("OpenDroneMap/FIELDimageR")
 library(FIELDimageR)
+library(FIELDimageR.Extra)
 library(raster)
 library(ggplot2)
 library(agricolae)
