@@ -584,7 +584,7 @@ ggplot(DataTotal.Reg,aes(y=Canopy_Are, x=GLI_men)) +
 
 > Launch the Binder button below to open a virtual RStudio (running this tutorial online):
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/filipematias23/FIELDimageR.Extra-Workshop-02.git/main?urlpath=rstudio)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/filipematias23/Phenomics-2024.git/main?urlpath=rstudio)
 
 <br />
 
