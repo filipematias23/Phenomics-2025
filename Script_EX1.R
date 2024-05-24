@@ -155,7 +155,7 @@ EPH<-CHM.RemSoil$newMosaic
 names(EPH)<-"EPH"
 Test.Info <- fieldInfo_extra(mosaic = EPH, 
                  fieldShape = Test.Info, 
-                 fun = mean) 
+                 fun = "mean") 
 colnames(Test.Info)
 colnames(Test.Info)[17]<-"EPH"
 
@@ -172,7 +172,7 @@ for(i in 2:length(MOSAIC)){
                             index = c("NGRDI","BGI", "GLI","VARI"),
                             myIndex = c("(Red-Blue)/Green","2*Green/Blue"),
                             plot = F)
-  EX1.Info<- fieldInfo_extra(mosaic = EX1.Indices[[c("NGRDI","BGI", "GLI","VARI","myIndex.1","myIndex.2")]],
+  EX1.Info<- fieldInfo_extra(mosaic = EX1.Indices,
                         fieldShape = plotShape)
   DSM0 <- rast(paste("./DSM/",DSM[1],sep = ""))
   DSM1 <- rast(paste("./DSM/",DSM[i],sep = ""))
@@ -191,7 +191,7 @@ for(i in 2:length(MOSAIC)){
   }
 
 colnames(DataTotal)
-colnames(DataTotal)[13]<-"EPH"
+colnames(DataTotal)[18]<-"EPH"
 DataTotal<-DataTotal[,!colnames(DataTotal)%in%c("ID","ID.1","PlotID","geometry")] # Removing column 12 ("ID.1")
 #write.csv(DataTotal,"DataTotal.csv",row.names = F,col.names = T)
 
