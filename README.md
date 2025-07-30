@@ -9,6 +9,16 @@
 <div id="menu" />
 
 ---------------------------------------------
+
+## Workshop Hands-On: 
+
+> Launch the Binder button below to open a virtual RStudio (running this tutorial online):
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/filipematias23/Phenomics-2025.git/main)
+
+<br />
+
+---------------------------------------------
 ## Resources
   
 [Step 1. Installation](#instal)
