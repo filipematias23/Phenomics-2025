@@ -94,13 +94,47 @@ library(doParallel)
 pics<-list.files("./soybean/")
 
 # Number of cores
-n.core<-2
+# n.core<-2
 
 # Starting parallel
-cl <- makeCluster(n.core, output = "")
-registerDoParallel(cl)
-EX.Table.Parallel <- foreach(i = 1:length(pics), .packages = c("stars","sf","terra","FIELDimageR"), 
-                             .combine = rbind) %dopar% {
+# cl <- makeCluster(n.core, output = "")
+# registerDoParallel(cl)
+# EX.Table.Parallel <- foreach(i = 1:length(pics), .packages = c("stars","sf","terra","FIELDimageR"), 
+  #                           .combine = rbind) %dopar% {
+   #                            EX3<-rast(paste("./soybean/",pics[i],sep = ""))
+    #                           EX3<-imgLAB(EX3)
+     #                          # Removing the background
+      #                         EX3.R<- fieldMask(mosaic = EX3, index = "BGI",
+       #                                          cropValue = 0.7,
+        #                                         cropAbove = T)
+         #                      # Counting the total number of seeds
+          #                     EX.P.Total<-fieldCount(mosaic = EX3.R$mask,plot = T)
+           #                    Total=EX.P.Total[EX.P.Total$area>15000,]
+            #                   # Selecting green seeds
+            #                   EX3.R2<- fieldMask(mosaic = EX3.R$newMosaic, 
+            #                                      index = "BI",
+            #                                      cropValue = 130,
+            #                                      cropAbove = T)
+            #                   # Counting the number of green seeds
+            #                   EX.Green<-fieldCount(mosaic = EX3.R2$mask,plot = T)
+            #                   Green=EX.Green[EX.Green$area>10800,]
+            #                   data.frame(Total=dim(Total)[1],
+            #                              Green=dim(Green)[1],
+            #                              Percentage=round(dim(Green)[1]/dim(Total)[1],2))
+            #                 }
+#stopCluster(cl)
+#rownames(EX.Table.Parallel)<-pics
+#EX.Table.Parallel 
+
+###########
+### New ###
+###########
+
+pics<-list.files("./soybean/")
+EX.Table.Parallel<-NULL
+
+for(i in 1:length(pics)){
+
                                EX3<-rast(paste("./soybean/",pics[i],sep = ""))
                                EX3<-imgLAB(EX3)
                                # Removing the background
@@ -117,14 +151,15 @@ EX.Table.Parallel <- foreach(i = 1:length(pics), .packages = c("stars","sf","ter
                                                   cropAbove = T)
                                # Counting the number of green seeds
                                EX.Green<-fieldCount(mosaic = EX3.R2$mask,plot = T)
-                               Green=EX.Green[EX.Green$area>10800,]
-                               data.frame(Total=dim(Total)[1],
+                               Green=EX.Green[EX.Green$area>11000,]
+                               EX.Table.Parallel<-rbind.data.frame(EX.Table.Parallel,data.frame(Total=dim(Total)[1],
                                           Green=dim(Green)[1],
-                                          Percentage=round(dim(Green)[1]/dim(Total)[1],2))
+                                          Percentage=round(dim(Green)[1]/dim(Total)[1],2)))
                              }
-stopCluster(cl)
+
 rownames(EX.Table.Parallel)<-pics
 EX.Table.Parallel 
+
 
 ##########################
 ### Seeds measurements ###
@@ -161,3 +196,4 @@ ggplot(Data.Obj1, aes(x=value, fill=variable)) +
 ###########
 ### END ###
 ###########
+
